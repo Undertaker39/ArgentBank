@@ -1,6 +1,8 @@
 import Userheader from "../../components/User-head"
+import UserData from "../../script/userdata"
 
 function User (){
+    UserData()
     return(
         <main className="main bg-dark">
             <Userheader/>
