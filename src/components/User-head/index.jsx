@@ -1,11 +1,19 @@
 import { useState } from "react";
 
-function Userheader(){
+function Userheader(data){
+    
+    const load = data.data
+    if (load!=null){
+        console.log(load.firstName)
+    }else{
+        console.log("0")
+    }
+    console.log(load)
     const [EditState, setEditState] = useState(false)
     if (EditState != true){
         return(
         <div className="header">
-            <h1>Welcome back<br />Tony Jarvis!</h1>
+            <h1>Welcome back<br />!</h1>
             <button className="edit-button" onClick={() => setEditState (!EditState)}>Edit Name</button>
         </div>
     )

@@ -16,6 +16,7 @@ function LogStatus(){
             headers: { "Content-type": "application/json" },
             body: ids
         })
+        
         const token = await data.json()
         if (token.status === 200){
             sessionStorage.setItem("token", token.body.token)

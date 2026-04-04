@@ -1,11 +1,15 @@
+import { useState } from "react"
 import Userheader from "../../components/User-head"
 import UserData from "../../script/userdata"
 
 function User (){
-    UserData()
+    const [Data,setData] = useState(null)
+    UserData(setData)
     return(
         <main className="main bg-dark">
-            <Userheader/>
+            <Userheader
+            data={Data}
+            />
             <h2 className="sr-only">Accounts</h2>
             <section className="account">
                 <div className="account-content-wrapper">
