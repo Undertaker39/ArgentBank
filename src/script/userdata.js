@@ -4,7 +4,6 @@ async function UserData(e){
         headers: { Authorization: 'Bearer ' + sessionStorage.token }
     })
     const User = await data.json()
-    sessionStorage.setItem("user",User.body)
     e(User.body)
     }
 

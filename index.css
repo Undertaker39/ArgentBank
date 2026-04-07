@@ -309,6 +309,25 @@ body {
   color: #fff;
 }
 
+.error-title{
+  font-size: 5rem;
+}
+
+.error-text{
+  font-size: 1.5rem;
+}
+
+.error-link{
+  font-size: 1rem;
+  color: white;
+}
+
+.loading{
+  font-size: 5rem;
+  color: white;
+}
+
+
 @media (min-width: 720px) {
   .account {
     flex-direction: row;
