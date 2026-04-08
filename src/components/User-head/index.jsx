@@ -6,11 +6,11 @@ function Userheader(data){
     const [EditState, setEditState] = useState(false)
     if (EditState != true){
         return(
-        <div className="header">
-            <h1>Welcome back<br />{datauser.firstName} {datauser.lastName}!</h1>
-            <button className="edit-button" onClick={() => setEditState (!EditState)}>Edit Name</button>
-        </div>
-    )
+            <div className="header">
+                <h1>Welcome back<br />{datauser.firstName} {datauser.lastName}!</h1>
+                <button className="edit-button" onClick={() => setEditState (!EditState)}>Edit Name</button>
+            </div>
+        )
     }else{
         return(
             <section className="edit-content">

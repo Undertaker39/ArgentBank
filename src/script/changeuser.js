@@ -11,17 +11,16 @@ async function changeUser(){
         const ids = JSON.stringify(user)
         const data = await fetch('http://localhost:3001/api/v1/user/profile', {
             method: "PUT",
-            headers: { Authorization: 'Bearer ' + sessionStorage.token },
+            headers: {
+                Authorization: 'Bearer ' + sessionStorage.token,
+                "Content-type": "application/json"
+            },
             body: ids
         })
-        console.log(data)
 
         const token = await data.json()
-        console.log(token)
         if (token.status === 200){
-            console.log("ok")
-
-        //    location.reload()
+            location.reload()
         }else{
             console.log("404")
         }

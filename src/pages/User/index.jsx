@@ -52,8 +52,7 @@ function User (){
                 </h1>
             </main>
         )
-    }
-    
+    } 
 }
 
 export default User
