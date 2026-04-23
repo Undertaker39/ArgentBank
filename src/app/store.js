@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 let state = {
-    token: null,
-    user: {}
+  token: null,
+  user: {}
 };
 
 const reducer = (currentState, action) => {
