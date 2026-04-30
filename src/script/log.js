@@ -1,5 +1,9 @@
+import { useDispatch } from "react-redux";
+import { login } from "../app/slice/tokenSlice";
+
 function LogStatus(){
     
+    const dispatch = useDispatch();
     const form = document.querySelector("form")
     let username = document.getElementById("username")
     let password = document.getElementById("password")
@@ -19,8 +23,9 @@ function LogStatus(){
         
         const token = await data.json()
         if (token.status === 200){
-            sessionStorage.setItem("token", token.body.token)
-            window.location.href = "/user"
+            //sessionStorage.setItem("token", token.body.token)
+            dispatch(login(data.body.token))
+            //window.location.href = "/user"
         }else{
             console.log("Votre adresse e-mail ou votre mot de passe sont erronés")
         }
