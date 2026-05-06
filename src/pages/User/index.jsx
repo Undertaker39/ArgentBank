@@ -1,15 +1,14 @@
-import { useState } from "react"
 import Userheader from "../../components/User-head"
-import UserData from "../../script/userdata"
+import { useSelector } from 'react-redux'
 
 function User (){
-    const [Data,setData] = useState(null)
-    if (Data!=null){
+
+    const token = useSelector((state) => state.token.token)
+
+    if (token!=null){
         return(
             <main className="main bg-dark">
-                <Userheader
-                data={Data}
-                />
+                <Userheader/>
                 <h2 className="sr-only">Accounts</h2>
                 <section className="account">
                     <div className="account-content-wrapper">
@@ -44,7 +43,6 @@ function User (){
             </main>
         )
     }else{
-        UserData(setData)
         return(
             <main className="main bg-dark">
                 <h1 className="loading">

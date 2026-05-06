@@ -10,7 +10,7 @@ const editorSlice = createSlice({
 
     reducers:{
         status : (state) => {
-
+            state.editorStatus = !state.editorStatus
         },
     }
 })
