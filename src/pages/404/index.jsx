@@ -1,4 +1,4 @@
-function Badway (){
+const Badway = () => {
     return(
         <main className="main bg-dark">
             <div className="header">

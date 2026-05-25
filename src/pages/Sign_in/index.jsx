@@ -1,19 +1,19 @@
 import { useDispatch } from "react-redux"
 import { login } from "../../app/slice/tokenSlice"
+import { useState } from "react";
 
-function Sign_in (){
+const Sign_in = () => {
 
     const dispatch = useDispatch();
+    const [username,setUsername] = useState("");
+    const [password,setPassword] = useState("");
     const LogStatus = async(event) => {
-
-        let username = document.getElementById("username")
-        let password = document.getElementById("password")
 
         event.preventDefault()
 
         const connexion = {
-            email: username.value,
-            password: password.value
+            email: username,
+            password: password
         }
         const ids = JSON.stringify(connexion)
         const data = await fetch('http://localhost:3001/api/v1/user/login', {
@@ -40,11 +40,11 @@ function Sign_in (){
                 <form>
                     <div className="input-wrapper">
                         <label htmlFor="username">Username</label>
-                        <input type="text" id="username" />
+                        <input type="email" id="username" value={username} onChange={(e)=>setUsername(e.target.value)} />
                     </div>
                     <div className="input-wrapper">
                         <label htmlFor="password">Password</label>
-                        <input type="password" id="password" />
+                        <input type="password" id="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
                     </div>
                     <div className="input-remember">
                         <input type="checkbox" id="remember-me" />

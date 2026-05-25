@@ -5,7 +5,7 @@ import { user } from "../../app/slice/userSlice"
 import { useEffect } from "react"
 
 
-function Header(){
+const Header = () => {
 
     const userName = useSelector((state) => state.user.user.userName)
     const token = useSelector((state) => state.token.token)

@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { status } from "../../app/slice/editorSlice";
 import { UserName } from "../../app/slice/userSlice"
 
-function Userheader(){
+const Userheader = () => {
     const user = useSelector((state) => state.user.user)
     const token = useSelector((state) => state.token.token)
     const EditState = useSelector((state)=>state.editor.editorStatus)

@@ -1,7 +1,7 @@
 import Userheader from "../../components/User-head"
 import { useSelector } from 'react-redux'
 
-function User (){
+const User =  () => {
 
     const token = useSelector((state) => state.token.token)
 
