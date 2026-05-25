@@ -7,7 +7,7 @@ const Sign_in = () => {
     const dispatch = useDispatch();
     const [username,setUsername] = useState("");
     const [password,setPassword] = useState("");
-    const LogStatus = async(event) => {
+    const logStatus = async(event) => {
 
         event.preventDefault()
 
@@ -50,7 +50,7 @@ const Sign_in = () => {
                         <input type="checkbox" id="remember-me" />
                         <label htmlFor="remember-me">Remember me</label>
                     </div>
-                    <button onClick={LogStatus} className="sign-in-button">Sign In</button>
+                    <button onClick={logStatus} className="sign-in-button">Sign In</button>
                 </form>
             </section>
         </main>
